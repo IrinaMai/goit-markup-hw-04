@@ -5,6 +5,7 @@
   --acent-color: #2196f3;
   --bcg-dark-color: #2f303a;
   --bcg-white-color: #ffffff;
+  --bcg-lightgrey-color: #f5f4fa;
 }
 body {
   background-color: var(--white-color);
@@ -77,8 +78,21 @@ body {
 }
 
 /* Button */
-.button {
+.button.primery {
   background-color: var(--acent-color);
   color: var(--white-color);
   text-decoration: none;
 }
+.button.secondary {
+  background-color: var(--bcg-lightgrey-color);
+  color: var(--title-color);
+  text-decoration: none;
+}
+.button.secondary:hover,
+.button.secondary:focus {
+  background-color: var(--acent-color);
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+/* Page Portfolio */
