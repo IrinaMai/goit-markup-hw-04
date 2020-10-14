@@ -17,10 +17,29 @@
 	line-height: 1.71;
 	letter-spacing: 0.03em;
 }
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+}
 
-/* work with LOGO */
+/* ===========Common Rules=============== */
+.list {
+	list-style: none;
+	/* padding: 0;
+	margin: 0; */
+}
+address {
+	font-style: normal;
+}
+
+/*================== LOGO ====================*/
 .logo-link {
+	display: block;
+	margin-right: 93px;
 	text-decoration: none;
+	outline: none;
 }
 .logo {
 	font-family: raleway;
@@ -37,25 +56,9 @@
 .logo.white {
 	color: var(--white-color);
 }
+/* ============================================== */
 
-/* Lists without mark*/
-.list {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-address {
-	font-style: normal;
-}
-/* ===============HEADER+section============== */
-.container {
-	width: 1200px;
-	padding-left: 15px;
-	padding-right: 15px;
-	margin-left: auto;
-	margin-right: auto;
-	outline: 2px solid tomato;
-}
+/* ===============HEADER========================== */
 .nav-menu .link {
 	color: var(--title-color);
 	text-decoration: none;
@@ -65,9 +68,7 @@ address {
 	letter-spacing: 0.02em;
 }
 .nav-menu .link:hover,
-.nav-menu .link:focus {
-	color: var(--acent-color);
-}
+.nav-menu .link:focus,
 .nav-menu .link.current {
 	color: var(--acent-color);
 }
@@ -86,60 +87,53 @@ address {
 	color: var(--acent-color);
 }
 
-/* Title общее для заголовков*/
+.nav-menu .link,
+.nav-auth .link {
+	display: block;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	outline: 2px solid tomato;
+}
+.nav-menu li:not(:last-child),
+.nav-auth li:not(:last-child) {
+	margin-right: 50px;
+}
+.nav-main,
+.nav-menu,
+.nav-auth {
+	display: flex;
+	align-items: center;
+}
+.nav-main {
+	margin-right: auto;
+}
+
+.nav.container {
+	display: flex;
+	align-items: center;
+	height: 80px;
+}
+/* =============================================== */
+
+/* ===========common rules======================== */
+.container {
+	width: 1200px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	outline: 2px solid tomato;
+}
+
 .section-title {
 	color: var(--title-color);
 	font-weight: 700;
 	font-size: 36px;
 	line-height: 1.16x;
 	text-align: center;
-	margin-top: 0;
+	/* margin-top: 0; */
 	margin-bottom: 50px;
 }
-
-/* .pros.section-title,
-.portfolio.title {
-	display: none;
-} */
-
-/* The first section */
-
-.hero {
-	background-color: var(--bcg-dark-color);
-	text-align: center;
-}
-.hero-title {
-	color: var(--white-color);
-	font-weight: 900;
-	font-size: 44px;
-	line-height: 1.36;
-	text-align: center;
-	letter-spacing: 0.06em;
-	text-transform: uppercase;
-
-	margin-top: 0;
-	margin-bottom: 30px;
-}
-/* =========section PROS============ */
-.section.pros {
-	padding-top: 94px;
-	background-color: yellowgreen;
-}
-.pros.subtitle {
-	color: var(--title-color);
-	font-weight: bold;
-	font-size: 14px;
-	line-height: 1.14;
-	text-transform: uppercase;
-	margin-top: 0;
-	margin-bottom: 10;
-}
-
-.pros.description {
-	margin-top: 0;
-	margin-bottom: 0;
-}
-/* ========container WORK================== */
 
 .section.work,
 .section.team,
@@ -149,10 +143,78 @@ address {
 	background-color: rgb(231, 163, 231);
 }
 
-/* =========section TEAM============ */
-/* .team .section-title {
-	margin-top: 94px;
+/* .pros.section-title,
+.portfolio.title {
+	display: none;
 } */
+
+/* ============HERO section====================== */
+
+.hero {
+	background-color: var(--bcg-dark-color);
+	text-align: center;
+	height: 600px;
+	padding-top: 200px;
+	padding-bottom: 200px;
+}
+.hero-title {
+	color: var(--white-color);
+	font-weight: 900;
+	font-size: 44px;
+	line-height: 1.36;
+	text-align: center;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	width: 696px;
+	height: 120px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/* =============== PROS section ================ */
+.section.pros {
+	padding-top: 94px;
+	background-color: yellowgreen;
+}
+.pros .list {
+	display: flex;
+}
+.pros.item:not(:last-child) {
+	margin-right: 30px;
+}
+.pros.item {
+	flex-basis: calc((100% - 3 * 30px) / 4);
+}
+
+.pros.subtitle {
+	color: var(--title-color);
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 1.14;
+	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.pros.description {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+/* =============== WORK section ================== */
+
+.work .list {
+	display: flex;
+}
+.work .item:not(:nth-child(3n)) {
+	margin-right: 30px;
+}
+.work .item {
+	flex-basis: calc((100% - 2 * 30px) / 3);
+}
+
+/* ================ TEAM section ================ */
+
 .team.subtitle {
 	font-weight: 500;
 	color: var(--title-color);
@@ -164,15 +226,25 @@ address {
 .occupation {
 	font-weight: 400;
 	margin-bottom: 30px;
-	margin-top: 0;
+	/* margin-top: 0; */
 }
 .team.section {
 	background-color: rgb(74, 228, 220);
 }
+.team .list {
+	display: flex;
+}
+.team .item:not(:last-child) {
+	margin-right: 30px;
+}
+team .item {
+	flex-basis: calc((100 - 3 * 30px) / 4);
+}
 
-/* Footer */
+/* ================= FOOTER =================*/
 .footer {
 	background-color: var(--bcg-dark-color);
+	height: 252px;
 	/* padding-top: 60px;
 	padding-bottom: 60px; */
 }
@@ -186,9 +258,19 @@ address {
 	color: rgba(255, 255, 255, 0.6);
 	text-decoration: none;
 	font-style: normal;
+	padding-bottom: 10px;
+}
+.footer .container {
+	display: flex;
+	flex-direction: column;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+.footer .logo-link {
+	margin-bottom: 10px;
 }
 
-/* Button */
+/* =============BUTTON================= */
 .button {
 	display: inline-block;
 	padding: 10px 32px;
@@ -229,6 +311,7 @@ button[type="button"] {
 	font-size: 16px;
 	line-height: 1.625;
 	border: none;
+	outline: none;
 
 	padding: 6px 22px;
 	border-radius: 4px;
@@ -261,4 +344,39 @@ button[type="button"]:focus {
 	line-height: 1.87;
 	margin-top: 0;
 	margin-bottom: 20px;
+}
+
+/* ============= PORTFOLIO TOP==============*/
+.list.portfolio-btn {
+	display: flex;
+	width: 611px;
+	height: 54px;
+	margin-right: 294px;
+	margin-left: 294px;
+	margin-bottom: 34px;
+}
+.portfolio-btn:not(:last-child) {
+	margin-right: 8px;
+	outline: 2px solid tomato;
+	align-items: center;
+}
+
+/* ============PORTFOLIO BOTTOM============== */
+.portfolio.list {
+	display: flex;
+	flex-wrap: wrap;
+	/* background-color: yellow; */
+	margin: 0;
+}
+.portfolio .item:not(:nth-child(3n)) {
+	margin-right: 30px;
+}
+.portfolio .item:not(:nth-last-child(-n + 3)) {
+	margin-bottom: 30px;
+}
+
+.portfolio .item {
+	width: 370px;
+	height: 404px;
+	/* margin: 30px; */
 }
