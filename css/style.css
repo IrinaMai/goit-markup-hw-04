@@ -43,23 +43,21 @@ img {
 .logo-link {
 	text-decoration: none;
 	outline: none;
-}
-header .logo-link {
-	margin-right: 93px;
-}
-.logo {
+	color: var(--acent-color);
 	font-family: raleway;
 	font-weight: 700;
 	font-size: 26px;
 	line-height: 1.19;
 }
-.logo.black {
+
+header .logo-link {
+	margin-right: 93px;
+}
+
+.logo-link .dark {
 	color: #000000;
 }
-.logo.blue {
-	color: var(--acent-color);
-}
-.logo.white {
+.logo-link .white {
 	color: var(--white-color);
 }
 /* ============================================== */
@@ -120,8 +118,8 @@ header .logo-link {
 .nav.container {
 	display: flex;
 	align-items: center;
-	height: 80px;
 }
+
 /* =============================================== */
 
 /* ===========common rules======================== */
@@ -136,15 +134,14 @@ header .logo-link {
 	color: var(--title-color);
 	font-weight: 700;
 	font-size: 36px;
-	line-height: 1.16x;
+	line-height: 1.16;
 	text-align: center;
-	/* margin-top: 0; */
 	margin-bottom: 50px;
 }
 
-.section.work,
-.section.team,
-.section.portfolio {
+.section,
+.section,
+.section {
 	padding-top: 94px;
 	padding-bottom: 94px;
 }
@@ -159,7 +156,7 @@ header .logo-link {
 .hero {
 	background-color: var(--bcg-dark-color);
 	text-align: center;
-	height: 600px;
+	/* height: 600px; */
 	padding-top: 200px;
 	padding-bottom: 200px;
 }
@@ -172,8 +169,8 @@ header .logo-link {
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
 	margin-bottom: 30px;
-	width: 696px;
-	height: 120px;
+	max-width: 696px;
+	/* height: 120px; */
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -219,30 +216,30 @@ header .logo-link {
 }
 
 /* ================ TEAM section ================ */
-
+.section.team {
+	background-color: #f5f4fa;
+}
 .team.subtitle {
 	font-weight: 500;
 	color: var(--title-color);
 	font-size: 16px;
 	line-height: 1.87;
-	margin-top: 30px;
 	margin-bottom: 10px;
 }
 .occupation {
 	font-weight: 400;
 	margin-bottom: 30px;
-	/* margin-top: 0; */
 }
-
 .team .list {
 	display: flex;
 }
 .team .item:not(:last-child) {
 	margin-right: 30px;
 }
-team .item {
-	flex-basis: calc((100 - 3 * 30px) / 4);
+.team .item {
+	flex-basis: calc((100% - 3 * 30px) / 4);
 }
+
 .team .description {
 	text-align: center;
 	padding-top: 30px;
@@ -271,8 +268,6 @@ team .item {
 	margin-bottom: 10px;
 }
 .footer-address {
-	width: 231px;
-	height: 81px;
 	margin-top: 20px;
 }
 /* =============BUTTON================= */
@@ -282,7 +277,6 @@ team .item {
 	border-radius: 4px;
 	min-width: 200px;
 	text-align: center;
-	/* height: 50px; */
 
 	font-weight: bold;
 	font-size: 16px;
@@ -298,7 +292,7 @@ team .item {
 .button.secondary {
 	background-color: var(--bcg-lightgrey-color);
 	color: var(--title-color);
-	text-decoration: ;
+	text-decoration: none;
 }
 .button.secondary:hover,
 .button.secondary:focus {
@@ -341,14 +335,12 @@ button[type="button"]:focus {
 	line-height: 2;
 	letter-spacing: 0.06em;
 	color: var(--title-color);
-	margin-top: 20px;
+
 	margin-bottom: 4px;
 }
 .portfolio .category {
 	font-size: 16px;
 	line-height: 1.87;
-	margin-top: 0;
-	margin-bottom: 20px;
 }
 
 /* ============= PORTFOLIO TOP==============*/
@@ -383,10 +375,9 @@ header.portfolio {
 }
 
 .portfolio .item {
-	width: 370px;
-	height: 404px;
-	/* margin: 30px; */
+	flex-basis: calc((100% - 2 * 30px) / 3);
 }
 .pic-description {
 	padding: 20px 24px;
+	border: 1px solid #eeeeee;
 }
