@@ -41,10 +41,11 @@ img {
 }
 /*================== LOGO ====================*/
 .logo-link {
-	/* display: block; */
-	margin-right: 93px;
 	text-decoration: none;
 	outline: none;
+}
+header .logo-link {
+	margin-right: 93px;
 }
 .logo {
 	font-family: raleway;
@@ -93,11 +94,6 @@ img {
 	color: var(--acent-color);
 }
 
-.nav-main {
-	margin-right: auto;
-	display: flex;
-	align-items: center;
-}
 .nav-menu .link,
 .nav-auth .link {
 	display: block;
@@ -256,8 +252,8 @@ team .item {
 .footer {
 	background-color: var(--bcg-dark-color);
 	/* height: 252px; */
-	/* padding-top: 60px;
-	padding-bottom: 60px; */
+	padding-top: 60px;
+	padding-bottom: 60px;
 }
 
 .footer .footer-address {
@@ -265,22 +261,20 @@ team .item {
 	font-style: normal;
 }
 
-.footer.link {
+.footer .link {
 	color: rgba(255, 255, 255, 0.6);
 	text-decoration: none;
 	font-style: normal;
-	/* padding-bottom: 10px; */
 }
-.footer .container {
-	display: flex;
-	flex-direction: column;
-	/* padding-top: 60px;
-	padding-bottom: 60px; */
-}
+
 .footer .logo-link {
 	margin-bottom: 10px;
 }
-
+.footer-address {
+	width: 231px;
+	height: 81px;
+	margin-top: 20px;
+}
 /* =============BUTTON================= */
 .button {
 	display: inline-block;
@@ -304,7 +298,7 @@ team .item {
 .button.secondary {
 	background-color: var(--bcg-lightgrey-color);
 	color: var(--title-color);
-	text-decoration: none;
+	text-decoration: ;
 }
 .button.secondary:hover,
 .button.secondary:focus {
