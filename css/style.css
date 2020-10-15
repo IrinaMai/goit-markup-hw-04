@@ -178,6 +178,7 @@ header .logo-link {
 /* =============== PROS section ================ */
 .section.pros {
 	padding-top: 94px;
+	padding-bottom: 0;
 }
 .pros .list {
 	display: flex;
