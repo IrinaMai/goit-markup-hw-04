@@ -355,7 +355,7 @@ border-radius: 4px;
 	border: 1px solid var(--acent-color);
 }
 
-.clients.link:hover .svg:hover {
+.clients.link:hover .svg{
 	fill: var(--acent-color);
 }
 
