@@ -267,6 +267,7 @@ border-radius: 4px;
 /* ================ TEAM section ================ */
 .section.team {
 	background-color: #f5f4fa;
+	padding-bottom: 21px;
 }
 .team.subtitle {
 	font-weight: 500;
